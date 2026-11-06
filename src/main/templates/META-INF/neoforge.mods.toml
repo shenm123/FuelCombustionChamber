@@ -91,3 +91,24 @@ Example mod description.
 # stop your mod loading on the server for example.
 #[features.${mod_id}]
 #openGLVersion="[3.2,)"
+# 声明模组依赖：必须要有 Create
+[[dependencies.${mod_id}]]
+modId="create"
+type="required"
+versionRange="[6.0.10,)"
+ordering="NONE"
+side="BOTH"
+
+# 声明 JEI 为“可选依赖”
+[[dependencies.${mod_id}]]
+modId="jei"
+type="optional"
+versionRange="[19,)"
+ordering="AFTER"
+side="CLIENT"
+[[dependencies.${mod_id}]]
+modId="jade"
+type="optional"
+versionRange="[15.9,)"
+ordering="AFTER"
+side="CLIENT"

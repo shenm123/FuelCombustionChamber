@@ -1,0 +1,35 @@
+{
+  "variants": {
+    "facing=north,blaze=none": { "model": "create_fuel_burner:block/create_fuel_burner_unlit" },
+    "facing=east,blaze=none": { "model": "create_fuel_burner:block/create_fuel_burner_unlit", "y": 90 },
+    "facing=south,blaze=none": { "model": "create_fuel_burner:block/create_fuel_burner_unlit", "y": 180 },
+    "facing=west,blaze=none": { "model": "create_fuel_burner:block/create_fuel_burner_unlit", "y": 270 },
+
+    "facing=north,blaze=smouldering": { "model": "create_fuel_burner:block/create_fuel_burner_unlit" },
+    "facing=east,blaze=smouldering": { "model": "create_fuel_burner:block/create_fuel_burner_unlit", "y": 90 },
+    "facing=south,blaze=smouldering": { "model": "create_fuel_burner:block/create_fuel_burner_unlit", "y": 180 },
+    "facing=west,blaze=smouldering": { "model": "create_fuel_burner:block/create_fuel_burner_unlit", "y": 270 },
+
+    "facing=north,blaze=fading": { "model": "create_fuel_burner:block/create_fuel_burner_unlit" },
+    "facing=east,blaze=fading": { "model": "create_fuel_burner:block/create_fuel_burner_unlit", "y": 90 },
+    "facing=south,blaze=fading": { "model": "create_fuel_burner:block/create_fuel_burner_unlit", "y": 180 },
+    "facing=west,blaze=fading": { "model": "create_fuel_burner:block/create_fuel_burner_unlit", "y": 270 },
+
+    "facing=north,blaze=kindled": { "model": "create_fuel_burner:block/create_fuel_burner_lit" },
+    "facing=east,blaze=kindled": { "model": "create_fuel_burner:block/create_fuel_burner_lit", "y": 90 },
+    "facing=south,blaze=kindled": { "model": "create_fuel_burner:block/create_fuel_burner_lit", "y": 180 },
+    "facing=west,blaze=kindled": { "model": "create_fuel_burner:block/create_fuel_burner_lit", "y": 270 },
+
+    "facing=north,blaze=seething": { "model": "create_fuel_burner:block/create_fuel_burner_lit" },
+    "facing=east,blaze=seething": { "model": "create_fuel_burner:block/create_fuel_burner_lit", "y": 90 },
+    "facing=south,blaze=seething": { "model": "create_fuel_burner:block/create_fuel_burner_lit", "y": 180 },
+    "facing=west,blaze=seething": { "model": "create_fuel_burner:block/create_fuel_burner_lit", "y": 270 },
+
+    "facing=up,blaze=none": { "model": "create_fuel_burner:block/create_fuel_burner_unlit" },
+    "facing=down,blaze=none": { "model": "create_fuel_burner:block/create_fuel_burner_unlit" },
+    "facing=up,blaze=kindled": { "model": "create_fuel_burner:block/create_fuel_burner_lit" },
+    "facing=down,blaze=kindled": { "model": "create_fuel_burner:block/create_fuel_burner_lit" },
+    "facing=up,blaze=seething": { "model": "create_fuel_burner:block/create_fuel_burner_lit" },
+    "facing=down,blaze=seething": { "model": "create_fuel_burner:block/create_fuel_burner_lit" }
+  }
+}

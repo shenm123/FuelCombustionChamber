@@ -1,0 +1,8 @@
+{
+  "block.create_fuel_burner.create_fuel_burner": "Fuel Burner",
+  "itemGroup.create_fuel_burner": "Create: Fuel Burner",
+  "tooltip.create_fuel_burner.hold_shift": "§8Hold §7[Shift] §8for more info",
+  "tooltip.create_fuel_burner.desc.1": "Acts as a Blaze Burner to provide heat for basins.",
+  "tooltip.create_fuel_burner.desc.2": "Stores up to 1000mB of Lava to provide super heat.",
+  "tooltip.create_fuel_burner.desc.3": "§cWarning: Fuel burns much faster (2x normal, 8x super)."
+}

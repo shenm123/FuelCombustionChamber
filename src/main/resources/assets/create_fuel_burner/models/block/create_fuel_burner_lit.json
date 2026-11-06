@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "create_fuel_burner:block/top",
+    "down": "create:block/copper_underside",
+    "north": "create_fuel_burner:block/front_lit",
+    "south": "create_fuel_burner:block/side",
+    "east": "create_fuel_burner:block/side",
+    "west": "create_fuel_burner:block/side",
+    "particle": "create_fuel_burner:block/side"
+  }
+}
