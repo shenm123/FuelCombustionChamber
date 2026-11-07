@@ -6,5 +6,10 @@
   "tooltip.create_fuel_burner.desc.2": "内部可储存 1000mB 熔岩(不会消耗）有熔岩时提供超级加热。",
   "tooltip.create_fuel_burner.desc.3": "§c注意：燃料消耗速度极快（普通2倍，超级8倍）。",
 
-  "config.jade.plugin_create_fuel_burner.fuel_burner_provider": "燃料燃烧室信息"
+  "config.jade.plugin_create_fuel_burner.fuel_burner_provider": "燃料燃烧室信息",
+  "jade.create_fuel_burner.superheated": "超级加热",
+  "jade.create_fuel_burner.heated": "加热",
+  "jade.create_fuel_burner.inactive": "空闲",
+  "jade.create_fuel_burner.lava_amount": "剩余熔岩: %s mB",
+  "jade.create_fuel_burner.burn_time": "剩余燃烧时间: %s s"
 }
