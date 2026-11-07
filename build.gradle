@@ -26,7 +26,6 @@ sourceSets.main.resources {
     exclude("src/generated/**/.cache") // datagen cache files
 }
 
-repositories.clear() // 清空原有的，防止去连不上的国外服务器
 repositories {
     maven { url = "https://maven.blamejared.com/" }
     maven { url = "https://modmaven.dev" }
