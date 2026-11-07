@@ -4,5 +4,7 @@
   "tooltip.create_fuel_burner.hold_shift": "§8按住 §7[Shift] §8查看简介",
   "tooltip.create_fuel_burner.desc.1": "可替代烈焰人燃烧室，为上方的工作盆提供热量。",
   "tooltip.create_fuel_burner.desc.2": "内部可储存 1000mB 熔岩(不会消耗）有熔岩时提供超级加热。",
-  "tooltip.create_fuel_burner.desc.3": "§c注意：燃料消耗速度极快（普通2倍，超级8倍）。"
+  "tooltip.create_fuel_burner.desc.3": "§c注意：燃料消耗速度极快（普通2倍，超级8倍）。",
+
+  "config.jade.plugin_create_fuel_burner.fuel_burner_provider": "燃料燃烧室信息"
 }
