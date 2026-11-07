@@ -13,24 +13,23 @@ public enum FuelBurnerJadeProvider implements IBlockComponentProvider {
 
     @Override
     public void appendTooltip(ITooltip tooltip, BlockAccessor accessor, IPluginConfig config) {
-        tooltip.add(Component.literal("Jade 测试成功！").withStyle(ChatFormatting.GREEN));
         if (accessor.getBlockEntity() instanceof FuelBurnerBlockEntity burner) {
             if (burner.isLit) {
                 if (burner.lavaTank.getFluidAmount() >= 1000) {
-                    tooltip.add(Component.literal("超级加热 (Superheated)").withStyle(ChatFormatting.AQUA));
+                    tooltip.add(Component.translatable("jade.create_fuel_burner.superheated").withStyle(ChatFormatting.AQUA));
                 } else {
-                    tooltip.add(Component.literal("加热中 (Heated)").withStyle(ChatFormatting.GOLD));
+                    tooltip.add(Component.translatable("jade.create_fuel_burner.heated").withStyle(ChatFormatting.GOLD));
                 }
             } else {
-                tooltip.add(Component.literal("未加热 (Inactive)").withStyle(ChatFormatting.GRAY));
+                tooltip.add(Component.translatable("jade.create_fuel_burner.inactive").withStyle(ChatFormatting.GRAY));
             }
 
             int lavaAmount = burner.lavaTank.getFluidAmount();
-            tooltip.add(Component.literal("熔岩: " + lavaAmount + " / 1000 mB").withStyle(ChatFormatting.RED));
+            tooltip.add(Component.translatable("jade.create_fuel_burner.lava_amount", lavaAmount).withStyle(ChatFormatting.RED));
 
             int seconds = burner.remainingBurnTime / 20;
             if (seconds > 0) {
-                tooltip.add(Component.literal("剩余燃烧: " + seconds + " 秒").withStyle(ChatFormatting.YELLOW));
+                tooltip.add(Component.translatable("jade.create_fuel_burner.burn_time", seconds).withStyle(ChatFormatting.YELLOW));
             }
         }
     }

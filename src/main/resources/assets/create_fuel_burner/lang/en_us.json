@@ -4,5 +4,12 @@
   "tooltip.create_fuel_burner.hold_shift": "§8Hold §7[Shift] §8for more info",
   "tooltip.create_fuel_burner.desc.1": "Acts as a Blaze Burner to provide heat for basins.",
   "tooltip.create_fuel_burner.desc.2": "Stores up to 1000mB of Lava to provide super heat.",
-  "tooltip.create_fuel_burner.desc.3": "§cWarning: Fuel burns much faster (2x normal, 8x super)."
+  "tooltip.create_fuel_burner.desc.3": "§cWarning: Fuel burns much faster (2x normal, 8x super).",
+
+  "config.jade.plugin_create_fuel_burner.fuel_burner_provider": "Fuel Burner Info",
+  "jade.create_fuel_burner.superheated": "Superheated",
+  "jade.create_fuel_burner.heated": "Heated",
+  "jade.create_fuel_burner.inactive": "Inactive",
+  "jade.create_fuel_burner.lava_amount": "Lava Remaining: %s mB",
+  "jade.create_fuel_burner.burn_time": "Remaining Burn Time: %s s"
 }
