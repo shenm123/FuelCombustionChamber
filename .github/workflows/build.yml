@@ -27,8 +27,7 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: Build with Gradle
+          name: jars
           # 根据你的项目结构，路径通常是 build/libs，排除 sources 和 dev 等非发布用 jar
           path: build/libs/*.jar
-          # 如果构建失败，忽略这一步，避免报错
-          if-no-files-found: ignore
+          if-no-files-found: error
