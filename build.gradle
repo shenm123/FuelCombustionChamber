@@ -26,8 +26,9 @@ sourceSets.main.resources {
     exclude("src/generated/**/.cache") // datagen cache files
 }
 
-repositories.clear() // 清空原有的，防止去连不上的国外服务器
 repositories {
+    maven { url = "https://maven.blamejared.com/" }
+    maven { url = "https://modmaven.dev" }
     maven { url = 'https://maven.aliyun.com/repository/public' } // 阿里云，下载普通依赖极快
     maven { url = "https://libraries.minecraft.net/" } // 我的世界官方库
     maven { url = "https://neoforged.forgecdn.net/releases" } // NeoForge 国内可用镜像
@@ -149,19 +150,24 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-    // 1. 引入我们刚刚下载到 libs 文件夹里的本地包
-    implementation files("libs/create-1.21.1-6.0.10.jar")
-    implementation("net.createmod.ponder:ponder-neoforge:${ponder_version}+mc${minecraft_version}")
 
-    // 2. 保留 Registrate 的依赖 (它是从官方源下载的，体积很小，通常不会卡)
+    // ===== Create =====
+    implementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") {
+        transitive = false
+    }
+    implementation("net.createmod.ponder:ponder-neoforge:${ponder_version}+mc${minecraft_version}")
+    compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
+    runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
     implementation("com.tterrag.registrate:Registrate:${registrate_version}")
-    // 3. 本地引入的 JEI (🌟 替换成这两行)
-    compileOnly files("libs/jei-1.21.1-neoforge-19.43.0.390.jar")
-    localRuntime files("libs/jei-1.21.1-neoforge-19.43.0.390.jar")
-    // 使用 compileOnly 确保 Jade 不会被打包进你的模组
-    compileOnly "curse.maven:jade-324717:7545219"
-    // 如果在 libs 里放了 Jade 的 jar，加上这行，开发环境就会自动加载它
-    runtimeOnly files("libs/jade-1.21.1-neoforge-15.10.6.jar") // 文件名按你实际的改
+
+    // ===== JEI =====
+    compileOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
+    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+
+    // ===== JADE =====    
+    compileOnly("curse.maven:jade-324717:7545219")
+    runtimeOnly("curse.maven:jade-324717:7545219")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
